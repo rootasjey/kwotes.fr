@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/icon": "^1.0.0",
+    "@nuxt/image": "^1.7.0",
+    "@nuxt/ui": "^2.17.0",
+    "nuxt": "^3.12.3",
+    "nuxt-svgo": "^4.0.1"
+  },
+  "dependencies": {
+    "@june-so/analytics-next": "^2.0.0"
+  }
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --color-accent: #002875;
+  --color-accent-text: #002875;
+
+  --color-background: #F6F8FF;
+  --primary-color: #002875;
+  --secondary-color: #FE8E00;
+}
+
+html,
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+  font-family: "Nunito", sans-serif;
+
+  min-height: 100vh;
+  background-color: var(--color-background);
+}
+
+html:not([data-scroll='0']) {
+  nav {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+a,
+.link {
+  text-decoration: underline;
+  /* color: var(--color-accent); */
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-accent-text);
+  }
+}
