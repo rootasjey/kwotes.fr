@@ -66,13 +66,13 @@
         <div class="footer-date">🥕 Kwotes App, 2024</div>
 
         <div class="footer-links">
-          <span><a href="https://kwotes.substack.com/">Terms of use</a></span>
-          <span><a href="https://kwotes.substack.com/">Privacy Policy</a></span>
+          <span><a href="/terms">Terms of use</a></span>
+          <span><a href="/privacy">Privacy Policy</a></span>
           <span><a href="https://kwotes.substack.com/">Feedback</a></span>
           <span><a href="https://kwotes.substack.com/">Features</a></span>
           <span><a href="https://kwotes.substack.com/">Stories</a></span>
-          <span><a href="https://kwotes.substack.com/">Instagram</a></span>
-          <span><a href="https://kwotes.substack.com/">Facebook</a></span>
+          <span><a href="https://www.instagram.com/kwotesapp">Instagram</a></span>
+          <span><a href="https://www.facebook.com/kwotesapp">Facebook</a></span>
         </div>
 
         <span class="copyright">Made with 🥕in Paris 🧡</span>
