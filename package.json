@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "kowtes-fr",
   "private": true,
   "type": "module",
   "scripts": {
@@ -18,7 +18,8 @@
     "nuxt-svgo": "^4.0.1"
   },
   "dependencies": {
-    "@june-so/analytics-next": "^2.0.0"
+    "@june-so/analytics-next": "^2.0.0",
+    "nuxt-icon": "^1.0.0-beta.7"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
