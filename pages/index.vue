@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <div class="super-container">
     <header>
       <NuxtImg class="app-icon" src="/images/kwotes-icon.svg" width="100" height="100" alt="app icon" srcset="" />
       <h1 class="title">Kwotes</h1>
       <h2 class="subtitle">Quotes your way: Create, customize and share inspiration</h2>
-      <UButton class="store-badge" to="https://apps.apple.com/fr/app/kwotes/id6478239805?platform=iphone" color="white"
+      <UButton class="store-badge" @click="onClickAppStore" color="white"
         variant="ghost">
         <NuxtImg class="store-badge-img" src="/images/download-app-store.svg" alt="app icon" srcset="" />
       </UButton>
@@ -82,6 +82,11 @@
 </template>
 
 <script lang="ts" setup>
+import { useJune } from '../hooks/useJune';
+const { analytics } = useJune();
+
+analytics.track("visits", { path: "/" });
+
 const cardData = [
   {
     id: 1,
@@ -112,19 +117,26 @@ const cardData = [
     subtext: "Share   Distribute inspiring quotes easily via text, social media, or  images. Spread positivity and motivation to friends, family, and followers with a few simple taps.",
   },
 ]
+
+const onClickAppStore = () => {
+  analytics.track("click_app_store", { path: "/" });
+  window.open("https://apps.apple.com/fr/app/kwotes/id6478239805?platform=iphone", "_blank");
+};
 </script>
 
 <style>
-.container {
+.super-container {
   padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   header {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* margin-bottom: 48px; */
   }
 
   .app-icon {
@@ -163,10 +175,11 @@ const cardData = [
 
   .body {
     padding: 60px;
-
     max-width: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 32px;
     
     .card {
@@ -185,7 +198,6 @@ const cardData = [
         position: absolute;
         bottom: 0px;
         height: 100%;
-
         object-fit: cover;
       }
 
@@ -271,23 +283,24 @@ const cardData = [
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin-top: 24px;
+    width: 700px;
 
     .footer-date {
       font-size: 18px;
       color: var(--primary-color);
       font-weight: 600;
-      width: 80%;
+      width: 100%;
       -webkit-text-stroke: 1px;
     }
 
     .footer-links {
-      margin-top: 8px;
       display: flex;
+      flex-direction: row;
       gap: 12px;
-      width: 80%;
-
+      margin-top: 8px;
+      flex-wrap: wrap;
+      width: 100%;
       opacity: 0.6;
     }
 
@@ -302,6 +315,273 @@ const cardData = [
 
       width: 80%;
       -webkit-text-stroke: 1px;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .super-container {
+    .body {
+      .card {
+        height: 320px;
+        width: 90%;
+        
+        .card-cover {
+          height: 100%;
+          width: 90%;
+        }
+
+        .card-caption {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1174px) {
+  .super-container {
+    .body {
+      .card {
+        height: 260px;
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .super-container {
+    .body {
+      .card {
+        height: 220px;
+        width: 90%;
+
+        .card-caption {
+          font-size: 16px;
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      padding: 54px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .super-container {
+    padding: 60px;
+  
+    .body {
+      padding: 40px;
+      max-width: 100%;
+
+      .card {
+        height: 200px;
+        width: 90%;
+        
+        .card-cover {
+          height: 100%;
+          width: 90%;
+        }
+
+        .card-caption {
+          height: 100%;
+          padding: 24px;
+          font-size: 14px;
+        }
+      }
+
+      .body-bottom {
+        .paragraphs {
+          .paragraph {
+            .paragraph-title {
+              font-size: 18px;
+            }
+            
+            .paragraph-description {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      padding: 54px;
+    }
+  }
+}
+
+@media screen and (max-width: 689px) {
+  .super-container {
+    padding: 12px;
+    padding-top: 48px;
+    
+    .subtitle {
+        width: 100%;
+      }
+
+    .body {
+      padding: 0px;
+      padding-top: 48px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .card {
+        height: 200px;
+        width: 90%;
+        
+        .card-cover {
+          height: 100%;
+          width: 90%;
+        }
+
+        .card-caption {
+          height: 100%;
+          padding: 24px;
+          font-size: 14px;
+        }
+      }
+
+      .body-bottom {
+        .paragraphs {
+          .paragraph {
+            .paragraph-title {
+              font-size: 18px;
+            }
+            
+            .paragraph-description {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      padding: 54px;
+    }
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .super-container {
+    padding: 12px;
+    padding-top: 48px;
+    
+    .subtitle {
+      width: 100%;
+    }
+
+    .body {
+      padding: 0px;
+      padding-top: 48px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .card {
+        height: 180px;
+        width: 90%;
+        border-radius: 36px;
+        
+        .card-cover {
+          height: 100%;
+          width: 90%;
+        }
+
+        .card-caption {
+          height: 100%;
+          padding: 14px;
+          font-size: 12px;
+        }
+      }
+
+      .body-bottom {
+        .paragraphs {
+          .paragraph {
+            .paragraph-title {
+              font-size: 18px;
+            }
+            
+            .paragraph-description {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      padding: 54px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .super-container {
+    padding: 12px;
+    padding-top: 48px;
+    
+    .subtitle {
+      width: 100%;
+    }
+
+    .body {
+      padding: 0px;
+      padding-top: 48px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .card {
+        height: 150px;
+        width: 90%;
+        border-radius: 36px;
+        
+      .card-cover {
+          height: 100%;
+          width: 90%;
+        }
+
+        .card-caption {
+          height: 100%;
+          padding: 14px;
+          font-size: 12px;
+        }
+      }
+
+      .body-bottom {
+        .paragraphs {
+          .paragraph {
+            .paragraph-title {
+              font-size: 18px;
+            }
+            
+            .paragraph-description {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      padding: 54px;
     }
   }
 }

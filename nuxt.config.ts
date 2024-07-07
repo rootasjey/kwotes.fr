@@ -14,6 +14,6 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/styles/main.css"],
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "nuxt-svgo", "@nuxt/image", "@nuxt/icon"],
+  modules: ["@nuxt/ui", "nuxt-svgo", "@nuxt/image", "nuxt-icon"],
   compatibilityDate: "2024-07-06",
 })
