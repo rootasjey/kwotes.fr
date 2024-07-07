@@ -30,7 +30,6 @@ html:not([data-scroll='0']) {
 a,
 .link {
   text-decoration: underline;
-  /* color: var(--color-accent); */
   cursor: pointer;
   transition: 0.4s;
   padding: 3px;

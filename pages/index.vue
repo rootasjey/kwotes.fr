@@ -66,13 +66,13 @@
         <div class="footer-date">🥕 Kwotes App, 2024</div>
 
         <div class="footer-links">
-          <span><a href="/terms">Terms of use</a></span>
-          <span><a href="/privacy">Privacy Policy</a></span>
-          <span><a href="https://kwotes.substack.com/">Feedback</a></span>
-          <span><a href="https://kwotes.substack.com/">Features</a></span>
-          <span><a href="https://kwotes.substack.com/">Stories</a></span>
-          <span><a href="https://www.instagram.com/kwotesapp">Instagram</a></span>
-          <span><a href="https://www.facebook.com/kwotesapp">Facebook</a></span>
+          <ULink to="/terms">Terms of use</ULink>
+          <ULink to="/privacy">Privacy Policy</ULink>
+          <ULink target="_blank" to="https://kwotes.substack.com/">Feedback</ULink>
+          <ULink target="_blank" to="https://kwotes.substack.com/">Features</ULink>
+          <ULink target="_blank" to="https://kwotes.substack.com/">Stories</ULink>
+          <ULink target="_blank" to="https://www.instagram.com/kwotesapp">Instagram</ULink>
+          <ULink target="_blank" to="https://www.facebook.com/kwotesapp">Facebook</ULink>
         </div>
 
         <span class="copyright">Made with 🥕in Paris 🧡</span>
@@ -131,6 +131,11 @@ const onClickAppStore = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
   header {
     text-align: center;
@@ -212,7 +217,7 @@ const onClickAppStore = () => {
         padding: 24px;
         width: 50%;
 
-        font-size: 24px;
+        font-size: 20px;
 
         .subtext {
           color: #838282;
@@ -332,7 +337,7 @@ const onClickAppStore = () => {
         }
 
         .card-caption {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
     }
@@ -358,7 +363,7 @@ const onClickAppStore = () => {
         width: 90%;
 
         .card-caption {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
     }
@@ -379,7 +384,7 @@ const onClickAppStore = () => {
       max-width: 100%;
 
       .card {
-        height: 200px;
+        height: 240px;
         width: 90%;
         
         .card-cover {
@@ -390,7 +395,7 @@ const onClickAppStore = () => {
         .card-caption {
           height: 100%;
           padding: 24px;
-          font-size: 14px;
+          font-size: 12px;
         }
       }
 
@@ -416,14 +421,14 @@ const onClickAppStore = () => {
   }
 }
 
-@media screen and (max-width: 689px) {
+@media screen and (max-width: 789px) {
   .super-container {
     padding: 12px;
     padding-top: 48px;
     
     .subtitle {
-        width: 100%;
-      }
+      width: 100%;
+    }
 
     .body {
       padding: 0px;
@@ -435,7 +440,7 @@ const onClickAppStore = () => {
       justify-content: center;
 
       .card {
-        height: 200px;
+        height: 260px;
         width: 90%;
         
         .card-cover {
@@ -468,6 +473,90 @@ const onClickAppStore = () => {
     footer {
       width: 100%;
       padding: 54px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .footer-date {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 689px) {
+  .super-container {
+    padding: 12px;
+    padding-top: 48px;
+    
+    .subtitle {
+        width: 100%;
+      }
+
+    .body {
+
+      .card {
+        height: 260px;
+        width: 90%;
+        
+        .card-cover {
+          height: 100%;
+          width: 90%;
+        }
+
+        .card-caption {
+          height: 100%;
+          padding: 24px;
+          font-size: 14px;
+        }
+      }
+
+      .body-bottom {
+        .paragraphs {
+          .paragraph {
+            .paragraph-title {
+              font-size: 18px;
+            }
+            
+            .paragraph-description {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .super-container {
+    .body {
+      .card {
+        height: 240px;
+        width: 90%;
+        
+        .card-cover {
+          height: 100%;
+          width: 90%;
+        }
+
+        .card-caption {
+          height: 100%;
+          padding: 24px;
+          font-size: 14px;
+        }
+      }
     }
   }
 }
@@ -503,7 +592,7 @@ const onClickAppStore = () => {
         .card-caption {
           height: 100%;
           padding: 14px;
-          font-size: 12px;
+          font-size: 10px;
         }
       }
 
@@ -560,7 +649,7 @@ const onClickAppStore = () => {
         .card-caption {
           height: 100%;
           padding: 14px;
-          font-size: 12px;
+          font-size: 8px;
         }
       }
 
