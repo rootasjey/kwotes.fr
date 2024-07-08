@@ -4,8 +4,7 @@
       <NuxtImg class="app-icon" src="/images/kwotes-icon.svg" width="100" height="100" alt="app icon" srcset="" />
       <h1 class="title">Kwotes</h1>
       <h2 class="subtitle">Quotes your way: Create, customize and share inspiration</h2>
-      <UButton class="store-badge" @click="onClickAppStore" color="white"
-        variant="ghost">
+      <UButton class="store-badge" @click="onClickAppStore" color="white" variant="ghost">
         <NuxtImg class="store-badge-img" src="/images/download-app-store.svg" alt="app icon" srcset="" />
       </UButton>
     </header>
@@ -44,8 +43,11 @@
             </div>
             <div class="paragraph-description">
               Exciting updates are coming soon, including notifications, a customizable app icon, and new specific
-              categories to enhance your experience. <a href="https://kwotes.substack.com/"> Vote for your features
-                here</a>.
+              categories to enhance your experience. <ULink
+                href="https://kwotes-features.notion.site/Vote-for-your-next-feature-01f376b7d97046e09b90061555c990f3?pvs=74"
+                target="_blank">
+                Vote for your features
+                here</ULink>.
             </div>
           </div>
 
@@ -55,8 +57,8 @@
             </div>
             <div class="paragraph-description">
               We value your input and your user experience.
-              <a href="https://kwotes.substack.com/">Reply to our survey</a>, vote for upcoming features and
-              <a href="mailto:hello@kwotes.fr">contact us</a> directly with your suggestions.
+              <ULink href="https://tally.so/r/w7Dex0">Reply to our survey</ULink>, vote for upcoming features and
+              <ULink href="mailto:hello@kwotes.fr">contact us</ULink> directly with your suggestions.
             </div>
           </div>
         </div>
@@ -68,7 +70,7 @@
         <div class="footer-links">
           <ULink to="/terms">Terms of use</ULink>
           <ULink to="/privacy">Privacy Policy</ULink>
-          <ULink target="_blank" to="https://kwotes.substack.com/">Feedback</ULink>
+          <ULink target="_blank" to="https://tally.so/r/w7Dex0">Feedback</ULink>
           <ULink target="_blank" to="https://kwotes.substack.com/">Features</ULink>
           <ULink target="_blank" to="https://kwotes.substack.com/">Stories</ULink>
           <ULink target="_blank" to="https://www.instagram.com/kwotesapp">Instagram</ULink>
@@ -425,8 +427,19 @@ const onClickAppStore = () => {
   .super-container {
     padding: 12px;
     padding-top: 48px;
-    
+
+    .title {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.2;
+      -webkit-text-stroke: 1.5px var(--primary-color);
+    }
+  
     .subtitle {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.2;
+      -webkit-text-stroke: 1.7px black;
       width: 100%;
     }
 
@@ -456,7 +469,10 @@ const onClickAppStore = () => {
       }
 
       .body-bottom {
+        text-align: center;
+
         .paragraphs {
+          width: 100%;
           .paragraph {
             .paragraph-title {
               font-size: 18px;
@@ -481,15 +497,18 @@ const onClickAppStore = () => {
 
       .footer-date {
         text-align: center;
-        margin-bottom: 24px;
+        margin-bottom: 0px;
       }
 
       .footer-links {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 24px;
+        gap: 0px;
+
+        font-size: 12px;
+        line-height: 1.5;
       }
     }
   }
@@ -592,7 +611,15 @@ const onClickAppStore = () => {
         .card-caption {
           height: 100%;
           padding: 14px;
-          font-size: 10px;
+          font-size: 12px;
+        }
+
+        &.right .card-caption {
+          right: 24px;
+        }
+        
+        &.left .card-caption {
+          left: 24px;
         }
       }
 
@@ -641,15 +668,23 @@ const onClickAppStore = () => {
         width: 90%;
         border-radius: 36px;
         
-      .card-cover {
+        .card-cover {
           height: 100%;
-          width: 90%;
+          width: 100%;
         }
 
         .card-caption {
           height: 100%;
           padding: 14px;
-          font-size: 8px;
+          font-size: 10px;
+        }
+
+        &.right .card-caption {
+          right: 12px;
+        }
+        
+        &.left .card-caption {
+          left: 12px;
         }
       }
 
@@ -670,7 +705,19 @@ const onClickAppStore = () => {
 
     footer {
       width: 100%;
-      padding: 54px;
+      padding: 32px;
+      padding-top: 0;
+      
+      .copyright {
+          margin-top: 28px;
+          font-size: 14px;
+          text-align: center;
+      
+          font-weight: 400;
+      
+          width: 90%;
+          -webkit-text-stroke: 1px;
+        }
     }
   }
 }
