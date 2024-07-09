@@ -3,7 +3,7 @@
     <header>
       <NuxtImg class="app-icon" src="/images/kwotes-icon.svg" width="100" height="100" alt="app icon" srcset="" />
       <h1 class="title">Kwotes</h1>
-      <h2 class="subtitle">Quotes your way: Create, customize and share inspiration</h2>
+      <h2 class="subtitle">Quote your way: Create, customize and share inspiration</h2>
       <UButton class="store-badge" @click="onClickAppStore" color="white" variant="ghost">
         <NuxtImg class="store-badge-img" src="/images/download-app-store.svg" alt="app icon" srcset="" />
       </UButton>
@@ -30,7 +30,8 @@
               Who is behind Kwotes App and the carrot?
             </div>
             <div class="paragraph-description">
-              <u>Jérémie</u> is a creative developer and <u>Lucille</u>, a visionary and creative <u>product owner</u>.
+              <u>Jérémie</u> is a <u>creative developer</u> and <u>Lucille</u>, a visionary and creative <u>product
+                owner</u>.
               They both love bringing innovative projects to life and are behind the app and its charming carrot mascot.
             </div>
           </div>
@@ -43,11 +44,12 @@
             </div>
             <div class="paragraph-description">
               Exciting updates are coming soon, including notifications, a customizable app icon, and new specific
-              categories to enhance your experience. <ULink
-                href="https://kwotes-features.notion.site/Vote-for-your-next-feature-01f376b7d97046e09b90061555c990f3?pvs=74"
+              categories to enhance your experience.
+              <ULink
+                to="https://kwotes-features.notion.site/Vote-for-your-next-feature-01f376b7d97046e09b90061555c990f3?pvs=74"
                 target="_blank">
-                Vote for your features
-                here</ULink>.
+                Vote for your features here
+              </ULink>.
             </div>
           </div>
 
@@ -57,28 +59,13 @@
             </div>
             <div class="paragraph-description">
               We value your input and your user experience.
-              <ULink href="https://tally.so/r/w7Dex0">Reply to our survey</ULink>, vote for upcoming features and
-              <ULink href="mailto:hello@kwotes.fr">contact us</ULink> directly with your suggestions.
+              <ULink to="https://tally.so/r/w7Dex0" target="_blank">Reply to our survey</ULink>, vote for upcoming
+              features and
+              <ULink to="mailto:hello@kwotes.fr" target="_blank">contact us</ULink> directly with your suggestions.
             </div>
           </div>
         </div>
       </div>
-
-      <footer>
-        <div class="footer-date">🥕 Kwotes App, 2024</div>
-
-        <div class="footer-links">
-          <ULink to="/terms">Terms of use</ULink>
-          <ULink to="/privacy">Privacy Policy</ULink>
-          <ULink target="_blank" to="https://tally.so/r/w7Dex0">Feedback</ULink>
-          <ULink target="_blank" to="https://kwotes.substack.com/">Features</ULink>
-          <ULink target="_blank" to="https://kwotes.substack.com/">Stories</ULink>
-          <ULink target="_blank" to="https://www.instagram.com/kwotesapp">Instagram</ULink>
-          <ULink target="_blank" to="https://www.facebook.com/kwotesapp">Facebook</ULink>
-        </div>
-
-        <span class="copyright">Made with 🥕in Paris 🧡</span>
-      </footer>
     </div>
   </div>
 </template>
@@ -126,9 +113,10 @@ const onClickAppStore = () => {
 };
 </script>
 
-<style>
+<style scoped>
 .super-container {
   padding: 60px;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,6 +170,7 @@ const onClickAppStore = () => {
 
   .body {
     padding: 60px;
+    padding-bottom: 0;
     max-width: 90%;
     display: flex;
     flex-direction: column;
@@ -285,45 +274,6 @@ const onClickAppStore = () => {
       }
     }
   }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 24px;
-    width: 700px;
-
-    .footer-date {
-      font-size: 18px;
-      color: var(--primary-color);
-      font-weight: 600;
-      width: 100%;
-      -webkit-text-stroke: 1px;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: row;
-      gap: 12px;
-      margin-top: 8px;
-      flex-wrap: wrap;
-      width: 100%;
-      opacity: 0.6;
-    }
-
-    .copyright {
-      margin-top: 42px;
-      font-size: 19px;
-      text-align: center;
-      
-      font-family: 'Fredoka';
-      font-weight: 400;
-      color: var(--primary-color);
-
-      width: 80%;
-      -webkit-text-stroke: 1px;
-    }
-  }
 }
 
 @media screen and (max-width: 1250px) {
@@ -369,11 +319,6 @@ const onClickAppStore = () => {
         }
       }
     }
-
-    footer {
-      width: 100%;
-      padding: 54px;
-    }
   }
 }
 
@@ -414,11 +359,6 @@ const onClickAppStore = () => {
           }
         }
       }
-    }
-
-    footer {
-      width: 100%;
-      padding: 54px;
     }
   }
 }

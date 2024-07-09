@@ -17,6 +17,8 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui", "nuxt-svgo", "@nuxt/image", "nuxt-icon"],
   compatibilityDate: "2024-07-06",
   routeRules: {
-    "/": { prerender: true }
+    "/": { prerender: true },
+    "/terms": { prerender: true },
+    "/privacy": { prerender: true },
   }
 })
