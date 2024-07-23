@@ -2,7 +2,9 @@
   <div class="super-container">
     <h1 class="title">
       Terms of Use
-      <span class="badge">kwotes</span>
+      <ULink to="/">
+        <span class="badge">kwotes</span>
+      </ULink>
     </h1>
 
     <h2 class="subtitle">
@@ -91,7 +93,8 @@
     </h2>
 
     <div class="paragraph">
-      If you have any questions about these Terms of Use, <ULink to="mailto:hello@kwotes.fr" target="_blank">please contact us</ULink>.
+      If you have any questions about these Terms of Use, <ULink to="mailto:hello@kwotes.fr" target="_blank">please
+        contact us</ULink>.
       By using Kwotes, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use.
     </div>
   </div>

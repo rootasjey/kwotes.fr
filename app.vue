@@ -11,14 +11,11 @@
       <div class="footer-links">
         <ULink to="/terms">Terms of use</ULink>
         <ULink to="/privacy">Privacy Policy</ULink>
-        <ULink target="_blank" to="https://tally.so/r/w7Dex0">Feedback</ULink>
-        <ULink target="_blank"
-          to="https://kwotes-features.notion.site/Vote-for-your-next-feature-01f376b7d97046e09b90061555c990f3?pvs=74">
-          Features
-        </ULink>
-        <ULink target="_blank" to="https://kwotes.substack.com/">Stories</ULink>
-        <ULink target="_blank" to="https://www.instagram.com/kwotesapp">Instagram</ULink>
-        <ULink target="_blank" to="https://www.facebook.com/kwotesapp">Facebook</ULink>
+        <span>/</span>
+        <ULink target="_blank" to="https://cutt.ly/KektB6QT">Bento</ULink>
+        <ULink target="_blank" to="https://cutt.ly/dekt1RTB">Stories</ULink>
+        <ULink target="_blank" to="https://cutt.ly/Nekt0mOL">Instagram</ULink>
+        <ULink target="_blank" to="https://cutt.ly/0ekt0rTX">Facebook</ULink>
       </div>
       <span class="copyright">Made with 🥕in Paris 🧡</span>
     </footer>

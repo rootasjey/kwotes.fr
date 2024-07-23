@@ -2,7 +2,9 @@
   <div class="super-container">
     <h1 class="title">
       Privacy Policy
-      <span class="badge">kwotes</span>
+      <ULink to="/">
+        <span class="badge">kwotes</span>
+      </ULink>
     </h1>
 
     <div class="paragraph">

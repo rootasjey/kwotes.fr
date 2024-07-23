@@ -1,9 +1,19 @@
 <template>
   <div class="super-container">
+    <UButton class="beta-tester-button" label="Become a beta tester" to="https://cutt.ly/1ektXt3R" target="_blank"
+      color="white" variant="link">
+    </UButton>
+
     <header>
       <NuxtImg class="app-icon" src="/images/kwotes-icon.svg" width="100" height="100" alt="app icon" srcset="" />
       <h1 class="title">Kwotes</h1>
       <h2 class="subtitle">Quote your way: Create, customize and share inspiration</h2>
+
+      <a href="https://cutt.ly/tejBc8V1" target="_blank"><img
+          src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=593955&theme=light"
+          alt="Kwotes&#0032;App - Quote&#0032;it&#0044;&#0032;like&#0032;it&#0044;&#0032;share&#0032;it | Product Hunt"
+          style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
       <UButton class="store-badge" @click="onClickAppStore" color="white" variant="ghost">
         <NuxtImg class="store-badge-img" src="/images/download-app-store.svg" alt="app icon" srcset="" />
       </UButton>
@@ -30,9 +40,14 @@
               Who is behind Kwotes App and the carrot?
             </div>
             <div class="paragraph-description">
-              <u>Jérémie</u> is a <u>creative developer</u> and <u>Lucille</u>, a visionary and creative <u>product
-                owner</u>.
-              They both love bringing innovative projects to life and are behind the app and its charming carrot mascot.
+              <ULink to="https://bento.me/rootasjey" target="_blank"><u>Jérémie</u></ULink> is a creative developer and 
+              <ULink
+                to="https://bento.me/lucillevigne" target="_blank">
+                <u>Lucille</u>
+              </ULink>,
+              a visionary and creative product owner.
+              They both love bringing innovative projects to life and are behind the app and its charming carrot
+              mascot.
             </div>
           </div>
 
@@ -45,11 +60,11 @@
             <div class="paragraph-description">
               Exciting updates are coming soon, including notifications, a customizable app icon, and new specific
               categories to enhance your experience.
-              <ULink
-                to="https://kwotes-features.notion.site/Vote-for-your-next-feature-01f376b7d97046e09b90061555c990f3?pvs=74"
-                target="_blank">
-                Vote for your features here
-              </ULink>.
+              <ULink to="https://cutt.ly/Mekyiu7v" target="_blank">
+                <u>
+                  Vote for your features here.
+                </u>
+              </ULink>
             </div>
           </div>
 
@@ -59,9 +74,11 @@
             </div>
             <div class="paragraph-description">
               We value your input and your user experience.
-              <ULink to="https://tally.so/r/w7Dex0" target="_blank">Reply to our survey</ULink>, vote for upcoming
+              <ULink to="https://cutt.ly/2ekyu0Dx" target="_blank"><u>Reply to our survey.</u></ULink>, vote for
+              upcoming
               features and
-              <ULink to="mailto:hello@kwotes.fr" target="_blank">contact us</ULink> directly with your suggestions.
+              <ULink to="mailto:hello@kwotes.fr" target="_blank"><u>contact us</u></ULink> directly with your
+              suggestions.
             </div>
           </div>
         </div>
@@ -109,7 +126,7 @@ const cardData = [
 
 const onClickAppStore = () => {
   analytics.track("click_app_store", { path: "/" });
-  window.open("https://apps.apple.com/fr/app/kwotes/id6478239805?platform=iphone", "_blank");
+  window.open("https://cutt.ly/fejVZHf6", "_blank");
 };
 </script>
 
@@ -125,6 +142,12 @@ const onClickAppStore = () => {
   a {
     text-decoration: underline;
     cursor: pointer;
+  }
+
+  .beta-tester-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
   header {
@@ -154,10 +177,12 @@ const onClickAppStore = () => {
     line-height: 1.2;
     -webkit-text-stroke: 1.7px black;
     width: 550px;
+
+    margin-bottom: 24px;
   }
 
   .store-badge {
-    margin-top: 24px;
+    margin-top: 8px;
 
     &:hover {
       background-color: transparent;
