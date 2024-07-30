@@ -1,21 +1,35 @@
 <template>
   <div class="super-container">
-    <UButton class="beta-tester-button" label="Become a beta tester" to="https://cutt.ly/1ektXt3R" target="_blank"
+    <a href="https://www.producthunt.com/posts/kwotes-app?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-kwotes&#0045;app"
+      target="_blank"><img
+        src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=471955&theme=light"
+        alt="Kwotes&#0032;•&#0032;App - Quote&#0032;it&#0044;&#0032;like&#0032;it&#0044;&#0032;share&#0032;it | Product Hunt"
+        style="width: 250px; height: 54px;" width="250" height="54" class="mb-12" /></a>
+
+
+    <UButton 
+      class="beta-tester-button--top hidden md:block" 
+      label="Become a beta tester" 
+      to="https://cutt.ly/1ektXt3R" 
+      target="_blank"
       color="white" variant="link">
     </UButton>
 
     <header>
       <NuxtImg class="app-icon" src="/images/kwotes-icon.svg" width="100" height="100" alt="app icon" srcset="" />
       <h1 class="title">Kwotes</h1>
-      <h2 class="subtitle">Quote your way: Create, customize and share inspiration</h2>
-
-      <a href="https://cutt.ly/tejBc8V1" target="_blank"><img
-          src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=593955&theme=light"
-          alt="Kwotes&#0032;App - Quote&#0032;it&#0044;&#0032;like&#0032;it&#0044;&#0032;share&#0032;it | Product Hunt"
-          style="width: 250px; height: 54px;" width="250" height="54" /></a>
+      <h2 class="subtitle">Quote it, like it, share it</h2>
 
       <UButton class="store-badge" @click="onClickAppStore" color="white" variant="ghost">
         <NuxtImg class="store-badge-img" src="/images/download-app-store.svg" alt="app icon" srcset="" />
+      </UButton>
+
+      <UButton 
+        class="beta-tester-button--middle block md:hidden" 
+        label="Become a beta tester" 
+        to="https://cutt.ly/1ektXt3R" 
+        target="_blank"
+        color="white" variant="link">
       </UButton>
     </header>
 
@@ -40,9 +54,8 @@
               Who is behind Kwotes App and the carrot?
             </div>
             <div class="paragraph-description">
-              <ULink to="https://bento.me/rootasjey" target="_blank"><u>Jérémie</u></ULink> is a creative developer and 
-              <ULink
-                to="https://bento.me/lucillevigne" target="_blank">
+              <ULink to="https://bento.me/rootasjey" target="_blank"><u>Jérémie</u></ULink> is a creative developer and
+              <ULink to="https://bento.me/lucillevigne" target="_blank">
                 <u>Lucille</u>
               </ULink>,
               a visionary and creative product owner.
@@ -59,12 +72,7 @@
             </div>
             <div class="paragraph-description">
               Exciting updates are coming soon, including notifications, a customizable app icon, and new specific
-              categories to enhance your experience.
-              <ULink to="https://cutt.ly/Mekyiu7v" target="_blank">
-                <u>
-                  Vote for your features here.
-                </u>
-              </ULink>
+              categories to enhance your experience. <ULink to="https://cutt.ly/Mekyiu7v" target="_blank"><u>Vote for your features here</u></ULink>.
             </div>
           </div>
 
@@ -74,7 +82,7 @@
             </div>
             <div class="paragraph-description">
               We value your input and your user experience.
-              <ULink to="https://cutt.ly/2ekyu0Dx" target="_blank"><u>Reply to our survey.</u></ULink>, vote for
+              <ULink to="https://cutt.ly/2ekyu0Dx" target="_blank"><u>Reply to our survey</u></ULink>, vote for
               upcoming
               features and
               <ULink to="mailto:hello@kwotes.fr" target="_blank"><u>contact us</u></ULink> directly with your
@@ -144,7 +152,7 @@ const onClickAppStore = () => {
     cursor: pointer;
   }
 
-  .beta-tester-button {
+  .beta-tester-button--top {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -435,6 +443,7 @@ const onClickAppStore = () => {
 
       .body-bottom {
         text-align: center;
+        margin: 0 12px;
 
         .paragraphs {
           width: 100%;
@@ -489,7 +498,6 @@ const onClickAppStore = () => {
       }
 
     .body {
-
       .card {
         height: 260px;
         width: 90%;
@@ -589,6 +597,7 @@ const onClickAppStore = () => {
       }
 
       .body-bottom {
+        margin: 0;
         .paragraphs {
           .paragraph {
             .paragraph-title {

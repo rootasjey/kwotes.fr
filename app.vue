@@ -9,13 +9,17 @@
       <div class="footer-date">🥕 Kwotes App, 2024</div>
 
       <div class="footer-links">
-        <ULink to="/terms">Terms of use</ULink>
-        <ULink to="/privacy">Privacy Policy</ULink>
-        <span>/</span>
-        <ULink target="_blank" to="https://cutt.ly/KektB6QT">Bento</ULink>
-        <ULink target="_blank" to="https://cutt.ly/dekt1RTB">Stories</ULink>
-        <ULink target="_blank" to="https://cutt.ly/Nekt0mOL">Instagram</ULink>
-        <ULink target="_blank" to="https://cutt.ly/0ekt0rTX">Facebook</ULink>
+        <div class="footer-links-legal">
+          <ULink to="/terms">Terms of use</ULink>
+          <ULink to="/privacy">Privacy Policy</ULink>
+        </div>
+        <span class="hidden sm:block">/</span>
+        <div class="footer-links-social">
+          <ULink target="_blank" to="https://cutt.ly/KektB6QT">Bento</ULink>
+          <ULink target="_blank" to="https://cutt.ly/dekt1RTB">Stories</ULink>
+          <ULink target="_blank" to="https://cutt.ly/Nekt0mOL">Instagram</ULink>
+          <ULink target="_blank" to="https://cutt.ly/0ekt0rTX">Facebook</ULink>
+        </div>
       </div>
       <span class="copyright">Made with 🥕in Paris 🧡</span>
     </footer>
@@ -55,11 +59,24 @@
       .footer-links {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 12px;
         margin-top: 8px;
         flex-wrap: wrap;
         width: 100%;
         opacity: 0.6;
+
+        .footer-links-legal {
+          display: flex;
+          flex-direction: row;
+          gap: 12px;
+        }
+
+        .footer-links-social {
+          display: flex;
+          flex-direction: row;
+          gap: 12px;
+        }
       }
   
       .copyright {
@@ -85,6 +102,7 @@
     }
   }
 }
+
 @media screen and (max-width: 900px) {
   .super-container {
     footer {
@@ -109,13 +127,20 @@
         text-align: center;
         margin-bottom: 0px;
       }
+    }
+  }
+}
 
+@media screen and (min-width: 640px) {
+  .super-container {
+    footer {
       .footer-links {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 0px;
+        gap: 12px;
 
         font-size: 12px;
         line-height: 1.5;
@@ -124,11 +149,44 @@
   }
 }
 
-@media screen and (max-width: 549px) {
+@media screen and (max-width: 639px) {
   .super-container {
     footer {
       width: 100%;
       padding: 54px;
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        /* font-size: 12px; */
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .super-container {
+    footer {
+      width: 100%;
+      padding: 54px;
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        font-size: 12px;
+        line-height: 1.5;
+      }
     }
   }
 }
