@@ -13,7 +13,7 @@
           <ULink to="/terms">Terms of use</ULink>
           <ULink to="/privacy">Privacy Policy</ULink>
         </div>
-        <span class="hidden sm:block">/</span>
+        <span class="separator hidden sm:block">/</span>
         <div class="footer-links-social">
           <ULink target="_blank" to="https://cutt.ly/KektB6QT">Bento</ULink>
           <ULink target="_blank" to="https://cutt.ly/dekt1RTB">Stories</ULink>
@@ -49,6 +49,7 @@
       width: 750px;
   
       .footer-date {
+        text-align: center;
         font-size: 18px;
         color: var(--primary-color);
         font-weight: 600;
@@ -68,14 +69,20 @@
 
         .footer-links-legal {
           display: flex;
-          flex-direction: row;
+          font-size: 16px;
           gap: 12px;
+          flex-direction: row;
+        }
+
+        .separator {
+          font-size: 16px;
         }
 
         .footer-links-social {
           display: flex;
           flex-direction: row;
           gap: 12px;
+          font-size: 16px;
         }
       }
   
@@ -86,7 +93,6 @@
   
         font-family: 'Fredoka';
         font-weight: 400;
-        color: var(--primary-color);
   
         width: 80%;
         -webkit-text-stroke: 1px;
@@ -124,7 +130,6 @@
       justify-content: center;
 
       .footer-date {
-        text-align: center;
         margin-bottom: 0px;
       }
     }
@@ -163,7 +168,6 @@
         justify-content: center;
         gap: 4px;
 
-        /* font-size: 12px; */
         line-height: 1.5;
       }
     }
@@ -198,6 +202,10 @@
       padding: 32px;
       padding-top: 0;
 
+      .footer-date {
+        font-size: 12px;
+      }
+
       .copyright {
         margin-top: 28px;
         font-size: 14px;
@@ -207,6 +215,16 @@
 
         width: 90%;
         -webkit-text-stroke: 1px;
+      }
+
+      .footer-links {
+        .footer-links-legal {
+          font-size: 12px;
+        }
+
+        .footer-links-social {
+          font-size: 12px;
+        }
       }
     }
   }
